@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CivicSetu | Civic Grievance Intelligence</title>
+    <meta
+      name="description"
+      content="CivicSetu bridges civic grievance data and decision making through data-driven insights, recurring issue detection, and ward-level analysis."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#f5f1ea] text-stone-800">
+    <header class="border-b border-emerald-900/10 bg-[#f7f3ee]">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between py-5">
+          <div class="flex items-center gap-3">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[#4b7b58] to-[#c27b3a] text-lg font-bold text-white shadow-soft">
+              C
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold tracking-tight text-[#27352d]">CivicSetu</div>
+              <div class="text-xs font-medium uppercase tracking-[0.18em] text-[#6b7168]">
+                Civic Grievance Intelligence
+              </div>
+            </div>
+          </div>
+
+          <div class="hidden items-center gap-8 text-sm font-medium text-stone-700 md:flex">
+            <a href="#" class="transition hover:text-[#365b46]">Dashboard</a>
+            <a href="#insights" class="transition hover:text-[#365b46]">Grievance Insights</a>
+            <a href="#issues" class="transition hover:text-[#365b46]">Recurring Issues</a>
+            <a href="#ward-analysis" class="transition hover:text-[#365b46]">Ward Analysis</a>
+            <a href="#about" class="transition hover:text-[#365b46]">About</a>
+          </div>
+
+          <button class="hidden rounded-full border border-[#365b46] bg-[#365b46] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#29483c] md:inline-flex">
+            View Insights
+          </button>
+
+          <button class="inline-flex rounded-lg border border-stone-300 p-2 text-stone-700 md:hidden" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="border-t border-stone-200 py-3 md:hidden">
+          <div class="flex flex-col gap-2 text-sm font-medium text-stone-700">
+            <a href="#" class="rounded-md px-2 py-2 hover:bg-stone-100">Dashboard</a>
+            <a href="#insights" class="rounded-md px-2 py-2 hover:bg-stone-100">Grievance Insights</a>
+            <a href="#issues" class="rounded-md px-2 py-2 hover:bg-stone-100">Recurring Issues</a>
+            <a href="#ward-analysis" class="rounded-md px-2 py-2 hover:bg-stone-100">Ward Analysis</a>
+            <a href="#about" class="rounded-md px-2 py-2 hover:bg-stone-100">About</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+        <div class="grid items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+          <div>
+            <div class="mb-5 inline-flex items-center rounded-full border border-[#d6c5aa] bg-[#f0e9df] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#5a4a35]">
+              Sustainable civic intelligence
+            </div>
+            <h1 class="max-w-xl text-4xl font-extrabold tracking-tight text-[#1d2d26] sm:text-5xl">
+              Understanding Civic Problems Through Data
+            </h1>
+            <p class="mt-5 max-w-xl text-lg leading-8 text-stone-700">
+              CivicSetu analyzes historical civic grievance data to identify recurring issues,
+              persistent problem areas, and important patterns across wards and grievance categories.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#insights"
+                class="inline-flex items-center rounded-full bg-[#355a46] px-6 py-3 text-base font-semibold text-white shadow-soft transition hover:bg-[#29483c]"
+              >
+                View Insights
+              </a>
+            </div>
+          </div>
+
+          <div class="glass-card overflow-hidden bg-gradient-to-br from-[#edf6ef] via-white to-[#f4efe7] p-5 sm:p-6">
+            <div class="flex items-center justify-between border-b border-stone-200 pb-4">
+              <div>
+                <p class="text-sm font-medium uppercase tracking-[0.16em] text-[#657267]">System overview</p>
+                <h2 class="mt-1 text-xl font-bold text-[#203229]">Civic signals</h2>
+              </div>
+              <span class="rounded-full bg-[#e8f3eb] px-2.5 py-1 text-xs font-semibold text-[#325e49]">Live summary</span>
+            </div>
+
+            <div class="mt-5 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-xl border border-[#dfe8de] bg-white p-4">
+                <p class="text-sm text-stone-600">Recurring issues</p>
+                <p class="mt-2 text-2xl font-bold text-[#213b32]">1,284</p>
+                <p class="mt-1 text-xs text-stone-500">Detected this quarter</p>
+              </div>
+              <div class="rounded-xl border border-[#e8dcc9] bg-[#f9f3ea] p-4">
+                <p class="text-sm text-stone-600">High-priority wards</p>
+                <p class="mt-2 text-2xl font-bold text-[#3f352b]">18</p>
+                <p class="mt-1 text-xs text-stone-500">Require review</p>
+              </div>
+            </div>
+
+            <div class="mt-5 rounded-2xl bg-[#1f352d] p-4 text-white">
+              <div class="flex items-center justify-between text-sm text-emerald-100">
+                <span>Priority trend</span>
+                <span class="font-semibold">+12.4%</span>
+              </div>
+              <div class="mt-4 flex items-end gap-2">
+                <div class="h-14 w-1/5 rounded-t-md bg-[#f1b46b]"></div>
+                <div class="h-20 w-1/5 rounded-t-md bg-[#d7905f]"></div>
+                <div class="h-24 w-1/5 rounded-t-md bg-[#9cc6a3]"></div>
+                <div class="h-28 w-1/5 rounded-t-md bg-[#6aab7e]"></div>
+                <div class="h-32 w-1/5 rounded-t-md bg-[#3f8f64]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+        <div class="mb-7">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#6b7168]">Overview</p>
+          <h2 class="mt-2 text-3xl font-bold tracking-tight text-[#23372e]">Grievance Overview</h2>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="glass-card p-6">
+            <div class="flex items-center justify-between">
+              <p class="text-sm font-medium text-stone-600">Total Grievances Analyzed</p>
+              <span class="rounded-full bg-[#edf6ee] p-2 text-[#2b6b4d]">📊</span>
+            </div>
+            <p class="mt-5 text-3xl font-extrabold text-[#1f362d]">7.5 Lakh+</p>
+            <p class="mt-2 text-sm text-stone-500">Across all wards and categories</p>
+          </div>
+
+          <div class="glass-card p-6">
+            <div class="flex items-center justify-between">
+              <p class="text-sm font-medium text-stone-600">Recurring Issues</p>
+              <span class="rounded-full bg-[#f5efe5] p-2 text-[#8a5f36]">🔁</span>
+            </div>
+            <p class="mt-5 text-3xl font-extrabold text-[#1f362d]">1,284</p>
+            <p class="mt-2 text-sm text-stone-500">Patterns reproduced over time</p>
+          </div>
+
+          <div class="glass-card p-6">
+            <div class="flex items-center justify-between">
+              <p class="text-sm font-medium text-stone-600">Wards Analyzed</p>
+              <span class="rounded-full bg-[#edf5ef] p-2 text-[#2f6445]">🏙️</span>
+            </div>
+            <p class="mt-5 text-3xl font-extrabold text-[#1f362d]">198</p>
+            <p class="mt-2 text-sm text-stone-500">Locality-level trend mapping</p>
+          </div>
+
+          <div class="glass-card p-6">
+            <div class="flex items-center justify-between">
+              <p class="text-sm font-medium text-stone-600">Major Categories</p>
+              <span class="rounded-full bg-[#f4eee4] p-2 text-[#9a6737]">🧭</span>
+            </div>
+            <p class="mt-5 text-3xl font-extrabold text-[#1f362d]">12</p>
+            <p class="mt-2 text-sm text-stone-500">Core civic issue segments</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="issues" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="mb-7">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#6b7168]">Category mapping</p>
+          <h2 class="mt-2 text-3xl font-bold tracking-tight text-[#23372e]">Major Grievance Categories</h2>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div class="glass-card p-5">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-xl font-bold text-[#244033]">Roads & Infrastructure</h3>
+              <span class="rounded-full bg-[#eaf5ef] px-2.5 py-1 text-xs font-semibold text-[#355d48]">18,420</span>
+            </div>
+            <p class="mt-4 text-sm leading-6 text-stone-600">
+              Potholes, damaged surfaces, and deteriorating roads remain the most frequent public concern.
+            </p>
+          </div>
+
+          <div class="glass-card p-5">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-xl font-bold text-[#244033]">Garbage & Waste</h3>
+              <span class="rounded-full bg-[#f4e9dc] px-2.5 py-1 text-xs font-semibold text-[#7e5736]">14,860</span>
+            </div>
+            <p class="mt-4 text-sm leading-6 text-stone-600">
+              Waste collection, dumping hotspots, and irregular sanitation schedules continue to surface.
+            </p>
+          </div>
+
+          <div class="glass-card p-5">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-xl font-bold text-[#244033]">Streetlights</h3>
+              <span class="rounded-full bg-[#eaf1ef] px-2.5 py-1 text-xs font-semibold text-[#426353]">9,210</span>
+            </div>
+            <p class="mt-4 text-sm leading-6 text-stone-600">
+              Dark stretches and faulty fixtures are repeatedly reported in poorly lit corridors.
+            </p>
+          </div>
+
+          <div class="glass-card p-5">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-xl font-bold text-[#244033]">Drainage & Sewage</h3>
+              <span class="rounded-full bg-[#ebf0ea] px-2.5 py-1 text-xs font-semibold text-[#446149]">12,480</span>
+            </div>
+            <p class="mt-4 text-sm leading-6 text-stone-600">
+              Blocked drains and sewage overflow affect urban mobility and environmental health.
+            </p>
+          </div>
+
+          <div class="glass-card p-5">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-xl font-bold text-[#244033]">Water Supply</h3>
+              <span class="rounded-full bg-[#eef5f1] px-2.5 py-1 text-xs font-semibold text-[#2f654f]">8,930</span>
+            </div>
+            <p class="mt-4 text-sm leading-6 text-stone-600">
+              Irregular supply, water contamination, and leakage reports indicate recurring service issues.
+            </p>
+          </div>
+
+          <div class="glass-card p-5">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-xl font-bold text-[#244033]">Public Spaces</h3>
+              <span class="rounded-full bg-[#f4efe3] px-2.5 py-1 text-xs font-semibold text-[#8d6539]">7,640</span>
+            </div>
+            <p class="mt-4 text-sm leading-6 text-stone-600">
+              Public amenities and open areas require maintenance, cleanliness, and safe access planning.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="insights" class="bg-[#eef3ee] py-12">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-7">
+            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#677267]">Pattern detection</p>
+            <h2 class="mt-2 text-3xl font-bold tracking-tight text-[#23372e]">Recurring Civic Issues</h2>
+          </div>
+
+          <div class="grid gap-5 lg:grid-cols-3">
+            <article class="glass-card bg-white p-6">
+              <span class="inline-flex rounded-full bg-[#e6f0e7] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#2f6a4b]">
+                AI-generated insight
+              </span>
+              <h3 class="mt-4 text-xl font-bold text-[#224036]">Repeated Road Damage</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600">
+                Multiple grievances related to road damage have been reported repeatedly in the same areas.
+              </p>
+            </article>
+
+            <article class="glass-card bg-white p-6">
+              <span class="inline-flex rounded-full bg-[#f5ecdf] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#8f6238]">
+                AI-generated insight
+              </span>
+              <h3 class="mt-4 text-xl font-bold text-[#224036]">Persistent Garbage Complaints</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600">
+                Certain wards show repeated complaints related to waste collection and disposal.
+              </p>
+            </article>
+
+            <article class="glass-card bg-white p-6">
+              <span class="inline-flex rounded-full bg-[#edf3ef] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#3a745d]">
+                AI-generated insight
+              </span>
+              <h3 class="mt-4 text-xl font-bold text-[#224036]">Streetlight Maintenance Pattern</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600">
+                Repeated streetlight-related grievances indicate areas requiring continued attention.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="ward-analysis" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="mb-7">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#6b7168]">Spatial analysis</p>
+          <h2 class="mt-2 text-3xl font-bold tracking-tight text-[#23372e]">Ward-Level Analysis</h2>
+        </div>
+
+        <div class="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-soft">
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-left text-sm text-stone-700">
+              <thead class="bg-[#f5f1ea] text-xs uppercase tracking-[0.16em] text-[#58635e]">
+                <tr>
+                  <th class="px-5 py-4 font-semibold">Ward</th>
+                  <th class="px-5 py-4 font-semibold">Total Grievances</th>
+                  <th class="px-5 py-4 font-semibold">Recurring Issues</th>
+                  <th class="px-5 py-4 font-semibold">Top Category</th>
+                  <th class="px-5 py-4 font-semibold">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-t border-stone-200">
+                  <td class="px-5 py-4 font-medium text-[#20362e]">Ward 1</td>
+                  <td class="px-5 py-4">1,240</td>
+                  <td class="px-5 py-4">86</td>
+                  <td class="px-5 py-4">Roads</td>
+                  <td class="px-5 py-4">
+                    <span class="rounded-full bg-[#f7e3d6] px-2.5 py-1 text-xs font-semibold text-[#a95d2f]">High</span>
+                  </td>
+                </tr>
+                <tr class="border-t border-stone-200">
+                  <td class="px-5 py-4 font-medium text-[#20362e]">Ward 2</td>
+                  <td class="px-5 py-4">980</td>
+                  <td class="px-5 py-4">54</td>
+                  <td class="px-5 py-4">Garbage</td>
+                  <td class="px-5 py-4">
+                    <span class="rounded-full bg-[#f0e7d7] px-2.5 py-1 text-xs font-semibold text-[#7d5d31]">Medium</span>
+                  </td>
+                </tr>
+                <tr class="border-t border-stone-200">
+                  <td class="px-5 py-4 font-medium text-[#20362e]">Ward 3</td>
+                  <td class="px-5 py-4">1,560</td>
+                  <td class="px-5 py-4">102</td>
+                  <td class="px-5 py-4">Drainage</td>
+                  <td class="px-5 py-4">
+                    <span class="rounded-full bg-[#f4e2dc] px-2.5 py-1 text-xs font-semibold text-[#9b4f43]">High</span>
+                  </td>
+                </tr>
+                <tr class="border-t border-stone-200">
+                  <td class="px-5 py-4 font-medium text-[#20362e]">Ward 4</td>
+                  <td class="px-5 py-4">720</td>
+                  <td class="px-5 py-4">31</td>
+                  <td class="px-5 py-4">Streetlights</td>
+                  <td class="px-5 py-4">
+                    <span class="rounded-full bg-[#e5f0e5] px-2.5 py-1 text-xs font-semibold text-[#406f58]">Low</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="bg-[#f8f4ef] py-12">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="glass-card p-6 sm:p-8 lg:p-10">
+            <article class="prose prose-lg max-w-none prose-stone prose-headings:text-[#213830] prose-p:text-stone-700 prose-li:text-stone-700 prose-strong:text-[#213830]">
+              <h2>About CivicSetu</h2>
+              <p>
+                Civic grievance systems generate large amounts of historical data. Looking at complaints individually may make recurring patterns difficult to identify, especially across wards and categories.
+              </p>
+              <p>
+                CivicSetu uses data analysis and AI-assisted pattern detection to identify recurring issues, persistent problem areas, and emerging trends. The system is designed to support better municipal planning, faster prioritization, and evidence-based decision making for civic authorities.
+              </p>
+              <ul>
+                <li>Recurring issue detection</li>
+                <li>Ward-level analysis</li>
+                <li>Grievance pattern analysis</li>
+                <li>Data-driven decision support</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-stone-200 bg-[#1d2f2b] text-stone-200">
+      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <div class="text-xl font-bold text-white">CivicSetu – Civic Grievance Intelligence</div>
+            <p class="mt-2 text-sm text-stone-300">An academic project demonstrating data-driven civic problem analysis.</p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-5 text-sm text-stone-300">
+            <a href="#" class="hover:text-white">Dashboard</a>
+            <a href="#insights" class="hover:text-white">Insights</a>
+            <a href="#about" class="hover:text-white">About</a>
+          </div>
+        </div>
+
+        <div class="mt-6 border-t border-stone-700 pt-4 text-sm text-stone-400">
+          © 2026 CivicSetu
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
