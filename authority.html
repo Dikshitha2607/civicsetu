@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CivicSetu | Civic Grievance Intelligence</title>
+    <meta
+      name="description"
+      content="CivicSetu bridges civic grievance data and decision making through data-driven insights, recurring issue detection, and ward-level analysis."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#f5f1ea] text-stone-800">
+    <header class="sticky top-0 z-50 border-b border-emerald-900/10 bg-[#f7f3ee]/90 backdrop-blur-sm">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between py-4">
+          <a href="#top" class="flex items-center gap-3" aria-label="CivicSetu home">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[#3d6f52] to-[#d28746] text-lg font-bold text-white shadow-soft">
+              C
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold tracking-tight text-[#27352d]">CivicSetu</div>
+              <div class="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#6b7168]">
+                civic intelligence
+              </div>
+            </div>
+          </a>
+
+          <nav class="hidden items-center gap-8 text-sm font-medium text-stone-700 md:flex">
+            <a href="#what-we-do" class="transition hover:text-[#365b46]">What we do</a>
+            <a href="#issues" class="transition hover:text-[#365b46]">Recurring issues</a>
+            <a href="#analytics" class="transition hover:text-[#365b46]">Analytics</a>
+            <a href="#dashboard" class="transition hover:text-[#365b46]">Dashboard</a>
+            <a href="#authority-workspace" class="transition hover:text-[#365b46]">Authority workspace</a>
+            <a href="#about" class="transition hover:text-[#365b46]">About</a>
+          </nav>
+
+          <a
+            href="#dashboard"
+            class="hidden rounded-full border border-[#365b46] bg-[#365b46] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#29483c] md:inline-flex"
+          >
+            Explore insights
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+        <div class="grid items-center gap-10 lg:grid-cols-[1.18fr_0.82fr]">
+          <div>
+            <div class="mb-5 inline-flex items-center rounded-full border border-[#d7c9b0] bg-[#f0eadf] px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#5d4b35]">
+              Bengaluru civic intelligence
+            </div>
+            <h1 class="max-w-2xl text-4xl font-extrabold tracking-tight text-[#1d2d26] sm:text-5xl lg:text-6xl">
+              Understanding recurring civic problems through historical data.
+            </h1>
+            <p class="mt-5 max-w-xl text-lg leading-8 text-stone-700">
+              CivicSetu helps cities understand which civic issues keep returning, where they recur,
+              and what patterns stay unresolved even after individual complaints are marked resolved.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#dashboard"
+                class="inline-flex items-center rounded-full bg-[#355a46] px-6 py-3 text-base font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-[#29483c]"
+              >
+                View analytics
+              </a>
+              <a
+                href="#what-we-do"
+                class="inline-flex items-center rounded-full border border-stone-300 bg-white px-6 py-3 text-base font-semibold text-[#27473a] transition hover:-translate-y-0.5 hover:border-stone-400"
+              >
+                How it works
+              </a>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-6 text-sm text-stone-600">
+              <div>
+                <div class="text-2xl font-extrabold text-[#1d2d26]">12+</div>
+                <div class="text-stone-500">issue categories</div>
+              </div>
+              <div>
+                <div class="text-2xl font-extrabold text-[#1d2d26]">40+</div>
+                <div class="text-stone-500">ward clusters</div>
+              </div>
+              <div>
+                <div class="text-2xl font-extrabold text-[#1d2d26]">1 view</div>
+                <div class="text-stone-500">useful civic picture</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="overflow-hidden rounded-[28px] border border-stone-200 bg-white p-3 shadow-[0_30px_90px_rgba(24,39,33,0.12)]">
+              <img
+                src="https://s7ap1.scene7.com/is/image/incredibleindia/nandi-hills-bangalore-karnataka-1-attr-hero?qlt=82&ts=1742171255239"
+                alt="Nandi Hills scenic view near Bangalore"
+                class="h-[520px] w-full rounded-[22px] object-cover transition duration-500 hover:scale-[1.02]"
+              />
+            </div>
+
+            <div class="absolute -bottom-5 left-5 w-56 rounded-2xl border border-emerald-200 bg-white/95 p-4 shadow-soft backdrop-blur-sm">
+              <div class="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
+                <span>Signal score</span>
+                <span class="rounded-full bg-emerald-100 px-2 py-1 text-[10px] text-emerald-700">Stable</span>
+              </div>
+              <div class="mt-3 flex items-end gap-2">
+                <span class="text-3xl font-extrabold text-[#1d2d26]">82</span>
+                <span class="pb-1 text-sm text-stone-500">/100</span>
+              </div>
+              <div class="mt-3 h-2 overflow-hidden rounded-full bg-stone-200">
+                <div class="h-full w-[82%] rounded-full bg-gradient-to-r from-[#4b7b58] to-[#d19a5d]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="what-we-do" class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="mb-8 text-center">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#6b7168]">What CivicSetu does</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-[#23372e] md:text-4xl">
+            Turning historical civic data into actionable urban insight
+          </h2>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="group rounded-3xl border border-stone-200 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#edf4ee] text-2xl">📊</div>
+            <h3 class="text-xl font-bold text-[#244033]">Analyze recurring issues</h3>
+            <p class="mt-3 text-sm leading-7 text-stone-600">
+              CivicSetu studies historical complaint patterns to identify issues that appear repeatedly in the same wards, localities, or categories.
+            </p>
+          </article>
+
+          <article class="group rounded-3xl border border-stone-200 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f6efe4] text-2xl">🧭</div>
+            <h3 class="text-xl font-bold text-[#244033]">Discover patterns</h3>
+            <p class="mt-3 text-sm leading-7 text-stone-600">
+              The platform connects complaints across time, area, and issue type to reveal which problems are truly persistent and spatially clustered.
+            </p>
+          </article>
+
+          <article class="group rounded-3xl border border-stone-200 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#ebf2ef] text-2xl">🏙️</div>
+            <h3 class="text-xl font-bold text-[#244033]">Support planning</h3>
+            <p class="mt-3 text-sm leading-7 text-stone-600">
+              By highlighting continuing issues, the platform helps planners understand long-term civic stress points and prioritize urban interventions.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="issues" class="bg-[#eef3ee] py-12">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-8">
+            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#677267]">Recurring civic issues</p>
+            <h2 class="mt-3 text-3xl font-bold tracking-tight text-[#23372e] md:text-4xl">
+              Bengaluru issue clusters that keep resurfacing
+            </h2>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
+            <article class="group overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0HMGEmqIAYUu-CcRuMLxnIUrrsOcWtMRmOb1jGOAcxA&s"
+                alt="Road potholes and damaged urban street surface"
+                class="h-52 w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div class="p-5">
+                <div class="flex items-center justify-between gap-3">
+                  <h3 class="text-xl font-bold text-[#244033]">Potholes</h3>
+                  <span class="rounded-full bg-[#edf5ee] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#355d48]">High</span>
+                </div>
+                <p class="mt-3 text-sm leading-7 text-stone-600">
+                  Uneven roads and damaged asphalt continue to appear across traffic-heavy corridors.
+                </p>
+              </div>
+            </article>
+
+            <article class="group overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <img
+                src="https://th-i.thgim.com/public/incoming/dcam5h/article71080780.ece/alternates/LANDSCAPE_1200/_JAI9872.JPG"
+                alt="Garbage accumulation in a city area"
+                class="h-52 w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div class="p-5">
+                <div class="flex items-center justify-between gap-3">
+                  <h3 class="text-xl font-bold text-[#244033]">Garbage</h3>
+                  <span class="rounded-full bg-[#f7e6d6] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#995b2d]">Medium</span>
+                </div>
+                <p class="mt-3 text-sm leading-7 text-stone-600">
+                  Waste accumulation near lanes and local markets recurs in multiple localities.
+                </p>
+              </div>
+            </article>
+
+            <article class="group overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqPFCWrBzUAVUQGncutUiqccK_KTtZw_KhMXCUUl3t0_AZrz8mcJsUqU2v&s=10"
+                alt="Waterlogging and flooded urban drainage area"
+                class="h-52 w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div class="p-5">
+                <div class="flex items-center justify-between gap-3">
+                  <h3 class="text-xl font-bold text-[#244033]">Drainage</h3>
+                  <span class="rounded-full bg-[#e6f0ea] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#406b57]">High</span>
+                </div>
+                <p class="mt-3 text-sm leading-7 text-stone-600">
+                  Blocked drains and waterlogging create recurring mobility and sanitation problems.
+                </p>
+              </div>
+            </article>
+
+            <article class="group overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <img
+                src="https://th-i.thgim.com/public/incoming/hak1s8/article68187827.ece/alternates/FREE_1200/Footpath_01.jpg"
+                alt="Damaged infrastructure and road repairs in a city street"
+                class="h-52 w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div class="p-5">
+                <div class="flex items-center justify-between gap-3">
+                  <h3 class="text-xl font-bold text-[#244033]">Road damage</h3>
+                  <span class="rounded-full bg-[#edf3ef] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#2f6a4b]">High</span>
+                </div>
+                <p class="mt-3 text-sm leading-7 text-stone-600">
+                  Cracked surfaces, broken barriers, and damaged utilities interrupt daily movement.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="analytics" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="mb-8">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#6b7168]">How the analytics works</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-[#23372e] md:text-4xl">
+            From historical complaints to pattern-driven understanding
+          </h2>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-4">
+          <div class="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-[#edf4ee] text-lg font-bold text-[#29483c]">1</div>
+            <h3 class="text-lg font-bold text-[#244033]">Collect data</h3>
+            <p class="mt-3 text-sm leading-7 text-stone-600">
+              Historical civic issue records are gathered across categories, time, and ward location.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-[#f5efe6] text-lg font-bold text-[#7a552b]">2</div>
+            <h3 class="text-lg font-bold text-[#244033]">Cluster signals</h3>
+            <p class="mt-3 text-sm leading-7 text-stone-600">
+              Similar issues are grouped together to identify repeated hotspots and persistent trends.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-[#ebf0ee] text-lg font-bold text-[#2f654f]">3</div>
+            <h3 class="text-lg font-bold text-[#244033]">Measure recurrence</h3>
+            <p class="mt-3 text-sm leading-7 text-stone-600">
+              The system compares recurring problem frequency to reveal which issues keep returning.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-[#f1ebdf] text-lg font-bold text-[#8f6136]">4</div>
+            <h3 class="text-lg font-bold text-[#244033]">Prioritize action</h3>
+            <p class="mt-3 text-sm leading-7 text-stone-600">
+              Decision-makers can focus on places and categories that continue to affect residents long term.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="dashboard" class="bg-[#f4efe8] py-12">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#6b7168]">Bangalore civic insights</p>
+              <h2 class="mt-3 text-3xl font-bold tracking-tight text-[#23372e] md:text-4xl">
+                Sample civic dashboard preview
+              </h2>
+            </div>
+            <p class="text-sm text-stone-500">Illustrative dashboard values for demo purposes only.</p>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+            <div class="rounded-[28px] border border-stone-200 bg-[#1e312d] p-5 text-white shadow-soft sm:p-6">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-200">Bengaluru signal overview</p>
+                  <h3 class="mt-2 text-2xl font-bold">Weekly pattern monitor</h3>
+                </div>
+                <span class="rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-emerald-100">
+                  Sample data
+                </span>
+              </div>
+
+              <div class="mt-6 grid gap-4 sm:grid-cols-3">
+                <div class="rounded-2xl bg-white/5 p-4">
+                  <p class="text-xs uppercase tracking-[0.18em] text-emerald-100/80">Roads</p>
+                  <p class="mt-3 text-2xl font-extrabold">46%</p>
+                </div>
+                <div class="rounded-2xl bg-white/5 p-4">
+                  <p class="text-xs uppercase tracking-[0.18em] text-emerald-100/80">Garbage</p>
+                  <p class="mt-3 text-2xl font-extrabold">28%</p>
+                </div>
+                <div class="rounded-2xl bg-white/5 p-4">
+                  <p class="text-xs uppercase tracking-[0.18em] text-emerald-100/80">Drainage</p>
+                  <p class="mt-3 text-2xl font-extrabold">19%</p>
+                </div>
+              </div>
+
+              <div class="mt-6 flex h-44 items-end gap-3">
+                <div class="flex h-full flex-1 flex-col justify-end gap-2">
+                  <div class="h-2/5 rounded-t-xl bg-[#f3b46d]"></div>
+                  <span class="text-center text-[10px] uppercase tracking-[0.2em] text-stone-300">Mon</span>
+                </div>
+                <div class="flex h-full flex-1 flex-col justify-end gap-2">
+                  <div class="h-2/3 rounded-t-xl bg-[#d08d5b]"></div>
+                  <span class="text-center text-[10px] uppercase tracking-[0.2em] text-stone-300">Tue</span>
+                </div>
+                <div class="flex h-full flex-1 flex-col justify-end gap-2">
+                  <div class="h-3/5 rounded-t-xl bg-[#9cc6a3]"></div>
+                  <span class="text-center text-[10px] uppercase tracking-[0.2em] text-stone-300">Wed</span>
+                </div>
+                <div class="flex h-full flex-1 flex-col justify-end gap-2">
+                  <div class="h-4/5 rounded-t-xl bg-[#7db583]"></div>
+                  <span class="text-center text-[10px] uppercase tracking-[0.2em] text-stone-300">Thu</span>
+                </div>
+                <div class="flex h-full flex-1 flex-col justify-end gap-2">
+                  <div class="h-full rounded-t-xl bg-[#5aa970]"></div>
+                  <span class="text-center text-[10px] uppercase tracking-[0.2em] text-stone-300">Fri</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div class="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-xl font-bold text-[#244033]">Hotspot locations</h3>
+                  <span class="rounded-full bg-[#edf5ee] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#2f6a4b]">Updated</span>
+                </div>
+                <ul class="mt-5 space-y-4 text-sm text-stone-600">
+                  <li class="flex items-center justify-between gap-4 rounded-2xl bg-stone-50 px-3 py-3">
+                    <span>Koramangala</span>
+                    <span class="font-bold text-[#244033]">24%</span>
+                  </li>
+                  <li class="flex items-center justify-between gap-4 rounded-2xl bg-stone-50 px-3 py-3">
+                    <span>Whitefield</span>
+                    <span class="font-bold text-[#244033]">22%</span>
+                  </li>
+                  <li class="flex items-center justify-between gap-4 rounded-2xl bg-stone-50 px-3 py-3">
+                    <span>Yelahanka</span>
+                    <span class="font-bold text-[#244033]">18%</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft">
+                <h3 class="text-xl font-bold text-[#244033]">Key insight</h3>
+                <p class="mt-3 text-sm leading-7 text-stone-600">
+                  Issues like waterlogging and road damage appear repeatedly in the same corridors, even when individual complaints have already been resolved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="mb-8 text-center">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#6b7168]">Recurring complaint report</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-[#23372e] md:text-4xl">
+            Localised issue reports that show the real pattern
+          </h2>
+        </div>
+
+        <div class="overflow-hidden rounded-[28px] border border-stone-200 bg-white shadow-soft">
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-left text-sm text-stone-700">
+              <thead class="bg-[#f5f1ea] text-xs uppercase tracking-[0.16em] text-[#58635e]">
+                <tr>
+                  <th class="px-5 py-4 font-semibold">Location</th>
+                  <th class="px-5 py-4 font-semibold">Issue type</th>
+                  <th class="px-5 py-4 font-semibold">Complaints in 3 months</th>
+                  <th class="px-5 py-4 font-semibold">Pattern signal</th>
+                  <th class="px-5 py-4 font-semibold">Suggested action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-t border-stone-200">
+                  <td class="px-5 py-4 font-medium text-[#20362e]">Basappa Road, Shanti Nagar</td>
+                  <td class="px-5 py-4">Road damage / potholes</td>
+                  <td class="px-5 py-4">18 complaints</td>
+                  <td class="px-5 py-4"><span class="rounded-full bg-[#f7e3d6] px-2.5 py-1 text-xs font-semibold text-[#a95d2f]">High recurrence</span></td>
+                  <td class="px-5 py-4">Investigate drainage and resurfacing defects on the same stretch</td>
+                </tr>
+                <tr class="border-t border-stone-200">
+                  <td class="px-5 py-4 font-medium text-[#20362e]">7th Cross, Koramangala</td>
+                  <td class="px-5 py-4">Waterlogging / drainage</td>
+                  <td class="px-5 py-4">14 complaints</td>
+                  <td class="px-5 py-4"><span class="rounded-full bg-[#f0e7d7] px-2.5 py-1 text-xs font-semibold text-[#7d5d31]">Recurring hotspot</span></td>
+                  <td class="px-5 py-4">Review drain capacity and blocked runoff paths after rain</td>
+                </tr>
+                <tr class="border-t border-stone-200">
+                  <td class="px-5 py-4 font-medium text-[#20362e]">HSR Layout 5th Sector</td>
+                  <td class="px-5 py-4">Garbage accumulation</td>
+                  <td class="px-5 py-4">11 complaints</td>
+                  <td class="px-5 py-4"><span class="rounded-full bg-[#e6f0ea] px-2.5 py-1 text-xs font-semibold text-[#466e5e]">Persistent issue</span></td>
+                  <td class="px-5 py-4">Check collection frequency and illegal dumping points in the area</td>
+                </tr>
+                <tr class="border-t border-stone-200">
+                  <td class="px-5 py-4 font-medium text-[#20362e]">Yelahanka New Town</td>
+                  <td class="px-5 py-4">Streetlight outages</td>
+                  <td class="px-5 py-4">9 complaints</td>
+                  <td class="px-5 py-4"><span class="rounded-full bg-[#e5f0e5] px-2.5 py-1 text-xs font-semibold text-[#406f58]">Repeated problem</span></td>
+                  <td class="px-5 py-4">Audit electrical maintenance and vulnerable pole locations</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p class="mt-5 text-center text-sm text-stone-600">
+          This is the kind of civic intelligence CivicSetu helps surface: a single stretch or locality showing repeated complaints over time, even when temporary fixes are applied again and again.
+        </p>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="mb-8 text-center">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#6b7168]">Why it matters</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-[#23372e] md:text-4xl">
+            Built to support better civic planning and decisions
+          </h2>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#edf4ee] text-2xl">🔍</div>
+            <h3 class="text-lg font-bold text-[#244033]">Persistent patterns</h3>
+            <p class="mt-3 text-sm leading-7 text-stone-600">
+              Uncovers issues that continue despite individual resolutions and short-term fixes.
+            </p>
+          </article>
+
+          <article class="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f5efe6] text-2xl">📍</div>
+            <h3 class="text-lg font-bold text-[#244033]">Ward-level visibility</h3>
+            <p class="mt-3 text-sm leading-7 text-stone-600">
+              Helps identify which areas require deeper investigation and broader maintenance plans.
+            </p>
+          </article>
+
+          <article class="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#ebf2ef] text-2xl">🧠</div>
+            <h3 class="text-lg font-bold text-[#244033]">Trend analysis</h3>
+            <p class="mt-3 text-sm leading-7 text-stone-600">
+              Connects historical complaint data to help understand how issues evolve over time.
+            </p>
+          </article>
+
+          <article class="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f3ece0] text-2xl">🛠️</div>
+            <h3 class="text-lg font-bold text-[#244033]">Urban planning support</h3>
+            <p class="mt-3 text-sm leading-7 text-stone-600">
+              Converts issue history into useful direction for city planning and maintenance strategy.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 pb-16 pt-4 sm:px-6 lg:px-8">
+        <div class="rounded-[32px] bg-[#1f352d] px-6 py-10 text-white shadow-soft sm:px-8 lg:px-12">
+          <div class="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-200">Civic insight</p>
+              <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+                Better understanding starts with seeing the pattern.
+              </h2>
+              <p class="mt-4 max-w-xl text-base leading-8 text-emerald-50/90">
+                CivicSetu is designed to turn scattered civic problem records into clearer, evidence-based understanding for better decision-making in urban planning.
+              </p>
+            </div>
+            <div class="flex justify-center lg:justify-end">
+              <a
+                href="#top"
+                class="inline-flex items-center rounded-full bg-white px-6 py-3 text-base font-semibold text-[#1f352d] transition hover:-translate-y-0.5 hover:bg-emerald-50"
+              >
+                Explore CivicSetu
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="authority-workspace" class="bg-[#eef3ee] py-16">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#677267]">CivicSetu Authority</p>
+              <h2 class="mt-3 text-3xl font-bold tracking-tight text-[#23372e] md:text-4xl">Complaint operations workspace</h2>
+              <p class="mt-3 max-w-2xl text-stone-600">Review citizen submissions, inspect evidence and move each complaint through its processing stages.</p>
+            </div>
+            <span class="rounded-full border border-[#d7c9b0] bg-[#f0eadf] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-[#5d4b35]">Single authority view</span>
+          </div>
+
+          <div class="rounded-[28px] border border-stone-200 bg-white p-2 shadow-soft">
+            <div class="grid gap-2 sm:grid-cols-2" role="tablist" aria-label="Authority workspace sections">
+              <button type="button" class="authority-tab rounded-xl bg-[#355a46] px-4 py-3 text-sm font-bold text-white" data-authority-panel="authority-dashboard-panel">Dashboard</button>
+              <button type="button" class="authority-tab rounded-xl px-4 py-3 text-sm font-bold text-stone-600 hover:bg-stone-50" data-authority-panel="authority-review-panel">Review Complaints <span id="authority-count" class="ml-1 rounded-full bg-white/20 px-2 py-0.5 text-xs">0</span></button>
+            </div>
+          </div>
+
+          <div id="authority-dashboard-panel" class="authority-panel mt-6">
+            <div id="authority-metrics" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4"></div>
+            <div class="mt-6 grid gap-6 lg:grid-cols-[1.1fr_.9fr]">
+              <div class="rounded-[28px] border border-stone-200 bg-white p-6 shadow-soft">
+                <div class="flex items-center justify-between gap-3"><div><p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#6b7168]">Incoming queue</p><h3 class="mt-2 text-xl font-bold text-[#244033]">Latest submissions</h3></div><button type="button" class="open-review text-sm font-semibold text-[#355a46] hover:underline">Open review tab</button></div>
+                <div id="authority-latest" class="mt-5"></div>
+              </div>
+              <div class="rounded-[28px] bg-[#1f352d] p-6 text-white shadow-soft"><p class="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-200">Processing stages</p><h3 class="mt-3 text-xl font-bold">One shared civic record</h3><p class="mt-3 text-sm leading-7 text-emerald-50/80">Every status update is written to the shared browser record so the submitting citizen sees the same timeline.</p><div class="mt-6 space-y-3 text-sm text-emerald-50/80"><div>01 &nbsp;Complaint Received</div><div>02 &nbsp;Checked by Authority 1</div><div>03 &nbsp;Checked by Authority 2</div><div>04 &nbsp;Under Review</div><div>05 &nbsp;Assigning</div><div>06 &nbsp;Action Initiated</div><div>07 &nbsp;Final Update</div></div></div>
+            </div>
+          </div>
+
+          <div id="authority-review-panel" class="authority-panel mt-6" hidden>
+            <div class="grid gap-6 lg:grid-cols-[.72fr_1.28fr]">
+              <div class="rounded-[28px] border border-stone-200 bg-white p-5 shadow-soft"><div class="mb-4"><p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#6b7168]">Received complaints</p><h3 class="mt-2 text-xl font-bold text-[#244033]">Review queue</h3></div><div id="authority-complaint-list" class="space-y-3"></div></div>
+              <div id="authority-complaint-detail" class="rounded-[28px] border border-stone-200 bg-white p-6 shadow-soft sm:p-8"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-stone-200 bg-[#1d2f2b] text-stone-200">
+      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <div class="text-xl font-bold text-white">CivicSetu</div>
+            <p class="mt-2 text-sm text-stone-300">Bengaluru civic intelligence and historical issue analysis platform.</p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-5 text-sm text-stone-300">
+            <a href="#what-we-do" class="transition hover:text-white">What we do</a>
+            <a href="#issues" class="transition hover:text-white">Issues</a>
+            <a href="#dashboard" class="transition hover:text-white">Dashboard</a>
+          </div>
+        </div>
+
+        <div class="mt-6 border-t border-stone-700 pt-4 text-sm text-stone-400">
+          © 2026 CivicSetu • Demo civic analytics landing page
+        </div>
+      </div>
+    </footer>
+    <script>
+      (() => {
+        const complaintsKey = 'civicsetu_complaints';
+        const stages = ['Complaint Received', 'Checked by Authority 1', 'Checked by Authority 2', 'Under Review', 'Assigning', 'Action Initiated', 'Final Update'];
+        let selectedId = null;
+        const getComplaints = () => JSON.parse(localStorage.getItem(complaintsKey) || '[]');
+        const saveComplaints = (complaints) => localStorage.setItem(complaintsKey, JSON.stringify(complaints));
+        const escapeHtml = (value) => String(value || '').replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
+        const formatDate = (value) => new Intl.DateTimeFormat('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(value));
+        const renderAuthority = () => {
+          const complaints = getComplaints().sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+          const counts = stages.map((stage) => complaints.filter((complaint) => complaint.currentStatus === stage).length);
+          document.querySelector('#authority-count').textContent = complaints.length;
+          document.querySelector('#authority-metrics').innerHTML = [['Total received', complaints.length, 'bg-[#edf5ee] text-[#355d48]'], ['Needs review', complaints.filter((item) => item.currentStatus === 'Complaint Received').length, 'bg-[#f7e6d6] text-[#995b2d]'], ['In progress', complaints.filter((item) => !['Complaint Received', 'Final Update'].includes(item.currentStatus)).length, 'bg-[#f0eadf] text-[#7a552b]'], ['Final updates', counts[6], 'bg-[#e6f0ea] text-[#406b57]']].map(([label, count, style]) => `<div class="rounded-2xl border border-stone-200 bg-white p-5 shadow-soft"><span class="inline-flex rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] ${style}">${label}</span><p class="mt-4 text-3xl font-extrabold text-[#244033]">${count}</p></div>`).join('');
+          document.querySelector('#authority-latest').innerHTML = complaints.length ? `<div class="divide-y divide-stone-200">${complaints.slice(0, 4).map((complaint) => `<button type="button" class="authority-open-item flex w-full items-center justify-between gap-4 py-4 text-left" data-complaint-id="${complaint.complaintId}"><div><p class="text-xs font-bold uppercase tracking-[0.14em] text-[#6b7168]">${complaint.complaintId}</p><p class="mt-1 font-semibold text-[#244033]">${escapeHtml(complaint.subject)}</p></div><span class="shrink-0 rounded-full bg-[#edf5ee] px-2.5 py-1 text-[10px] font-bold text-[#355d48]">${escapeHtml(complaint.currentStatus)}</span></button>`).join('')}</div>` : '<div class="rounded-2xl bg-stone-50 p-6 text-center text-sm text-stone-500">No citizen complaints have been submitted yet.</div>';
+          document.querySelector('#authority-complaint-list').innerHTML = complaints.length ? complaints.map((complaint) => `<button type="button" class="authority-list-item w-full rounded-2xl border p-4 text-left transition ${selectedId === complaint.complaintId ? 'border-[#3d6f52] bg-[#edf5ee]' : 'border-stone-200 hover:border-[#9cc6a3]'}" data-complaint-id="${complaint.complaintId}"><div class="flex items-start justify-between gap-3"><div><p class="text-xs font-bold uppercase tracking-[0.14em] text-[#6b7168]">${complaint.complaintId}</p><p class="mt-1 font-semibold text-[#244033]">${escapeHtml(complaint.subject)}</p></div><span class="rounded-full bg-white px-2 py-1 text-[10px] font-bold text-[#355d48]">${escapeHtml(complaint.currentStatus)}</span></div><p class="mt-3 text-xs text-stone-500">${escapeHtml(complaint.area)}, ${escapeHtml(complaint.city)} &middot; ${formatDate(complaint.createdAt)}</p></button>`).join('') : '<div class="rounded-2xl bg-stone-50 p-6 text-center text-sm text-stone-500">The review queue is empty.</div>';
+          document.querySelectorAll('.authority-open-item, .authority-list-item').forEach((button) => button.addEventListener('click', () => { selectedId = button.dataset.complaintId; switchAuthorityPanel('authority-review-panel'); renderAuthority(); }));
+          if (!selectedId && complaints.length) selectedId = complaints[0].complaintId;
+          const selected = complaints.find((complaint) => complaint.complaintId === selectedId);
+          document.querySelector('#authority-complaint-detail').innerHTML = selected ? `<div class="flex flex-col justify-between gap-4 border-b border-stone-200 pb-5 sm:flex-row sm:items-start"><div><p class="text-xs font-bold uppercase tracking-[0.16em] text-[#6b7168]">${selected.complaintId}</p><h3 class="mt-2 text-2xl font-bold text-[#244033]">${escapeHtml(selected.subject)}</h3><p class="mt-2 text-sm text-stone-500">Submitted ${formatDate(selected.createdAt)} &middot; Updated ${formatDate(selected.updatedAt)}</p></div><span class="rounded-full bg-[#edf5ee] px-3 py-1.5 text-xs font-bold text-[#355d48]">${escapeHtml(selected.currentStatus)}</span></div><div class="mt-6 grid gap-6 sm:grid-cols-2"><div><h4 class="text-xs font-bold uppercase tracking-[0.16em] text-[#6b7168]">Citizen</h4><p class="mt-2 text-sm leading-6 text-stone-700">${escapeHtml(selected.citizen?.name)}<br />${escapeHtml(selected.citizen?.email)}<br />${escapeHtml(selected.citizen?.mobile)}</p></div><div><h4 class="text-xs font-bold uppercase tracking-[0.16em] text-[#6b7168]">Location</h4><p class="mt-2 text-sm leading-6 text-stone-700">${escapeHtml(selected.street)}<br />${escapeHtml(selected.area)}, ${escapeHtml(selected.ward)}<br />${escapeHtml(selected.city)}</p></div></div><div class="mt-6"><h4 class="text-xs font-bold uppercase tracking-[0.16em] text-[#6b7168]">Description</h4><p class="mt-2 whitespace-pre-wrap text-sm leading-7 text-stone-700">${escapeHtml(selected.description)}</p></div><div class="mt-6"><h4 class="text-xs font-bold uppercase tracking-[0.16em] text-[#6b7168]">Evidence (${selected.images?.length || 0})</h4><div class="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">${(selected.images || []).map((image) => `<img src="${image.data}" alt="Uploaded complaint evidence" class="h-24 w-full rounded-xl border border-stone-200 object-cover" />`).join('') || '<p class="col-span-full rounded-xl bg-stone-50 p-4 text-sm text-stone-500">No images attached.</p>'}</div></div><div class="mt-7 rounded-2xl bg-[#f5f1ea] p-4"><div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-center"><div><p class="text-xs font-bold uppercase tracking-[0.16em] text-[#6b7168]">Advance processing stage</p><p class="mt-1 text-sm text-stone-600">Only the Authority workspace can update this timeline.</p></div><select id="authority-status-select" class="rounded-xl border border-stone-300 bg-white px-3 py-2 text-sm font-semibold text-[#27473a]" ${selected.currentStatus === 'Final Update' ? 'disabled' : ''}>${stages.map((stage, index) => `<option value="${stage}" ${stage === selected.currentStatus ? 'selected' : ''} ${index < stages.indexOf(selected.currentStatus) ? 'disabled' : ''}>${stage}</option>`).join('')}</select></div></div>` : '<div class="flex min-h-[360px] items-center justify-center rounded-2xl bg-stone-50 p-8 text-center text-sm text-stone-500">Select a complaint from the review queue to inspect its details.</div>';
+          const select = document.querySelector('#authority-status-select');
+          if (select) select.addEventListener('change', (event) => { const nextStatus = event.target.value; const allComplaints = getComplaints(); const index = allComplaints.findIndex((complaint) => complaint.complaintId === selectedId); if (index < 0) return; const updatedAt = new Date().toISOString(); allComplaints[index].currentStatus = nextStatus; allComplaints[index].updatedAt = updatedAt; allComplaints[index].statusHistory = [...allComplaints[index].statusHistory, { status: nextStatus, timestamp: updatedAt }]; saveComplaints(allComplaints); renderAuthority(); });
+        };
+        const switchAuthorityPanel = (panelId) => { document.querySelectorAll('.authority-panel').forEach((panel) => { panel.hidden = panel.id !== panelId; }); document.querySelectorAll('.authority-tab').forEach((tab) => { const active = tab.dataset.authorityPanel === panelId; tab.classList.toggle('bg-[#355a46]', active); tab.classList.toggle('text-white', active); tab.classList.toggle('text-stone-600', !active); }); if (panelId === 'authority-review-panel') renderAuthority(); };
+        document.querySelectorAll('.authority-tab').forEach((tab) => tab.addEventListener('click', () => switchAuthorityPanel(tab.dataset.authorityPanel)));
+        document.querySelector('.open-review').addEventListener('click', () => switchAuthorityPanel('authority-review-panel'));
+        renderAuthority();
+        window.addEventListener('storage', renderAuthority);
+      })();
+    </script>
+  </body>
+</html>
