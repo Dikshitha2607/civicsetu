@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "tailwindcss -i ./src/lab1.css -o ./dist/output.css --minify",
-    "watch": "tailwindcss -i ./src/lab1.css -o ./dist/output.css --watch"
+    "build": "tailwindcss -i ./src/civicsetu.css -o ./dist/output.css --minify",
+    "watch": "tailwindcss -i ./src/civicsetu.css -o ./dist/output.css --watch"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
